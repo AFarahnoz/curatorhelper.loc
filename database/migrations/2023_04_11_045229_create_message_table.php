@@ -21,6 +21,7 @@ return new class extends Migration
             $table->enum('receiver', ['Донишҷӯ', 'Волидайн']);
             $table->unsignedInteger('studentId')->nullable()->index('studentId');
             $table->unsignedInteger('parentId')->nullable()->index('parentId');
+            $table->timestamps();
         });
     }
 

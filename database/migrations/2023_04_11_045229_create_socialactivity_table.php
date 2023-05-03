@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('time', 5);
             $table->unsignedInteger('groupId')->index('groupId');
             $table->string('place', 40);
+            $table->timestamps();
         });
     }
 
