@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('date', 13);
             $table->string('theme', 30);
             $table->string('protocol');
+            $table->timestamps();
         });
     }
 
