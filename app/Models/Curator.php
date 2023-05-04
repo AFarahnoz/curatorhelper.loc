@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Curator extends Model
 {
     use HasFactory;
+
+    public function group(){
+    	return $this->HasMany(Group::class);
+    }
 }

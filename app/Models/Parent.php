@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Parent extends Model
 {
     use HasFactory;
+
+    public function student(){
+    	return $this->HasOne(Student::class);
+    }
 }

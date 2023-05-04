@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class SocialActiviy extends Model
 {
     use HasFactory;
+
+     public function group(){
+    	return $this->HasOne(Group::class);
+    }
 }

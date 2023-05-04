@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class AcademicDebt extends Model
 {
     use HasFactory;
+
+    public function student(){
+    	return $this->HasOne(Student::class);
+    }
+
+    public function subject(){
+    	return $this->HasOne(Subject::class);
+    }
 }
