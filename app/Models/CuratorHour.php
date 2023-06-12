@@ -9,11 +9,15 @@ class CuratorHour extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'date',
+        'time',
+        'theme',
+        'auditorium'
+    ];
+
     public function group(){
     	return $this->HasOne(Group::class);
     }
 
-    public function auditorium(){
-    	return $this->HasOne(Auditorium::class);
-    }
 }

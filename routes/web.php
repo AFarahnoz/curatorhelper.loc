@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CuratorHourController;
+use App\Http\Controllers\SocialActivityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('curatorHour', CuratorHourController::class);
+Route::resource('socialActivity', SocialActivityController::class);

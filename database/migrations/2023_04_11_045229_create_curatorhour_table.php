@@ -17,10 +17,10 @@ return new class extends Migration
             $table->increments('id');
             $table->string('time', 5);
             $table->unsignedInteger('groupId')->index('groupId');
-            $table->unsignedInteger('auditoriumId')->index('auditoriumId');
+            $table->string('auditorium');
             $table->string('date', 13);
             $table->string('theme', 30);
-            $table->string('protocol');
+            $table->string('protocol')->nullable();
             $table->timestamps();
         });
     }

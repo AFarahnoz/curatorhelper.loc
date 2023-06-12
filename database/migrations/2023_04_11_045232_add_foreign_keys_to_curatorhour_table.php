@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('curatorhour', function (Blueprint $table) {
             $table->foreign(['groupId'], 'curatorhour_ibfk_1')->references(['id'])->on('group');
-            $table->foreign(['auditoriumId'], 'curatorhour_ibfk_2')->references(['id'])->on('auditorium');
+
         });
     }
 
@@ -28,7 +28,7 @@ return new class extends Migration
     {
         Schema::table('curatorhour', function (Blueprint $table) {
             $table->dropForeign('curatorhour_ibfk_1');
-            $table->dropForeign('curatorhour_ibfk_2');
+
         });
     }
 };

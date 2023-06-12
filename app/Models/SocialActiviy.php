@@ -9,6 +9,12 @@ class SocialActiviy extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'date',
+        'time',
+        'name',
+        'place'
+    ];
      public function group(){
     	return $this->HasOne(Group::class);
     }
